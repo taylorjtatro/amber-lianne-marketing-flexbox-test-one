@@ -106,6 +106,7 @@ textarea {
     font-size: 1em;
     color: #e2e3ed;
     text-align: left;
+    background: #fdf0ef;
   }
 
   ul,
@@ -166,6 +167,7 @@ header {
   align-items: center;
   flex-flow: row wrap;
   background-color: #fdf0ef;
+  padding: 15px 0;
 }
 
 header .content-wrapper {
@@ -173,6 +175,7 @@ header .content-wrapper {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  margin: 0;
 }
 
 header figure { /* Ask why we need the flex properties here? */
@@ -192,20 +195,56 @@ header figure { /* Ask why we need the flex properties here? */
 
 header nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-around; /* THis is putting it in the center right now */
   align-items: center;
+  flex-flow: row wrap; /*not sure why we have row wrap here? */
+  width: 60%; /*this is making it so that the nav is the same width as the logo */
+  font-size: 1.125em;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 header nav ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  width: 100%; /*without this li items by default sit right next to each other so this says we are going to have 100% width in the ul (so it will take the full nav width of 60%) */
+}
+
+header nav ul li {
+  font-size: 1.123em;
+  font-family: 'Galada', cursive;
+}
+
+/* =================== MAIN AREA ========================== */
+
+
+.hero-area {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap; /*Not sure why we need this here since there is only one flex item ?*/
+  background: url(../img/amber-hero-2.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+  background-repeat: no-repeat;
+}
+
+/* .content-wrapper {} dont need ths because it is already addressed in our main styles */
+
+.hero-area h1 {
+  font-size: 2.25em;
+  color: #f16059;
 }
 
 
+/* ------- ASIDE AREA this is my own code with no blueprint to follow ----- */
 
-
-
+aside { /* We are doing this as display flex even though theres only one item so that it is center aligned vertically and horizontally and makes the .content-wrapper in the middle because it is default set to 90% */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 
