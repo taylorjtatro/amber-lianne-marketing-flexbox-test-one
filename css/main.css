@@ -246,6 +246,18 @@ aside { /* We are doing this as display flex even though theres only one item so
   align-items: center;
 }
 
+aside .content-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+aside span {
+  color: #f16059;
+}
+
+/* -------- SECTION FEATURES AREA --------------- */
 
 
 
