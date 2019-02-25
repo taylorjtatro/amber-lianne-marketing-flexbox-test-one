@@ -222,7 +222,7 @@ header nav ul li {
   display: flex;
   justify-content: center;
   flex-flow: row wrap; /*Not sure why we need this here since there is only one flex item ?*/
-  background: url(../img/amber-hero-2.jpg);
+  background: url(../img/amber-hero-3.jpg);
   background-size: cover;
   background-position: center;
   min-height: 500px;
@@ -318,6 +318,66 @@ aside span {
   text-align: center;
   width: 65%;
 }
+
+
+/*------- FOOTER ----- */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background: #3b3b3b;
+  color: #ffffff; 
+}
+
+footer p {
+  margin: 0;
+}
+
+footer .content-wrapper {
+  width: 55%; /* If we add more social icons this well keep them so they arent all spread out */
+  margin: 50px 0; /* THis is redundant and already applied I dont think we really need it */
+}
+
+footer .contact {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: space-around; /* center would work for now but when i add more icons this would look better */
+  align-items: center;
+}
+
+
+footer .social-icons p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+footer .social-icons p i {
+  font-size: 1.3125em;
+}
+
+footer .copyright {
+  margin: 20px 0;
+}
+
+
+
+
+
 
  /* ==========================================================================
    Helper classes
