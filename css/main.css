@@ -233,9 +233,17 @@ header nav ul li {
 
 .hero-area h1 {
   font-size: 2.25em;
-  color: #f16059;
+  color: #4b4342;
+  text-shadow: -.5px .5px 2px #f16059;
+  font-style: italic;
 }
 
+.hero-area h1 span {
+color: #fb7171;
+font-style: italic;
+text-shadow: -1px 2px 5px #d4cccc;
+font-family: 'Galada', cursive;
+}
 
 /* ------- ASIDE AREA this is my own code with no blueprint to follow ----- */
 
@@ -294,6 +302,9 @@ aside span {
   margin: 0;
 }
 
+.features br {
+  display: none;/* Need this br for tablet sizing to make it look better*/
+}
 /*------- REVIEWS SECTION -----*/
 
 .reviews {
@@ -382,6 +393,16 @@ footer .copyright {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background: #f4f5f7;
+}
+
+.mission h2 span {
+  color: #f16059;
+}
+
+.mission-content span {
+  color: #f16059;
+  font-family: 'Galada', cursive;
 }
 
 .map figure { /* Divide Height by width to get the padding bottom percentage */
@@ -407,7 +428,42 @@ footer .copyright {
   flex-flow: row wrap;
 }
 
+.contact-section span {
+  color: #f16059;
+}
 
+/*------========== FAQ PAGE =========--------*/
+
+.faq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  background: #f4f5f7;
+}
+
+.faq .content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  margin: 50px 0;
+}
+
+.faq h2 {
+  margin-bottom: 40px;
+  line-height: 1;
+}
+
+.faq-content h4 {
+  line-height: 1.333;
+  font-weight: 700;
+}
+
+.faq-content span {
+  color: #f16059;
+  font-family: 'Galada', cursive;
+}
 
  /* ==========================================================================
    Helper classes
@@ -496,8 +552,127 @@ footer .copyright {
    Modify as content requires.
    ========================================================================== */
 
-   @media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+   /*---====== TABLET STYLES -----====*/
+
+   @media only screen and (min-width: 768px) {
+   /* General Styles */
+
+   .content-wrapper {
+    max-width: 640px; /* this seems good so that everything stays in line and doesnt get so spread out over the page */
+    margin: 100px 0; /* makes the rows a bit bigger since we are now on bigger screens */
+   }
+
+   h2 {
+    font-size: 2.25em;
+    line-height: 1.333;
+   }
+
+   h3 {
+    font-size: 1.5em;
+    line-height: 1.25;
+   }
+
+   /* HEADER */
+
+   header {
+    justify-content: space-around; /* Not sure why we would do this it only affects the content wrapper? */
+   }
+
+    header .content-wrapper {
+      justify-content: space-between; /* puts the logo on the left and the nav on the right */
+      width: 100%; /* This instead of defualt 90% but dont see why this is relevant */
+    }
+
+    header figure { /* we only want the logo to take up about 1/3 of the screen */
+      width: 30%;
+    }
+
+    header nav {
+      width: 20%; /* only want the nav to take up about 20% of screen on the left */
+    }
+
+    header nav ul {
+      justify-content: space-between;
+    }
+
+    header .header-divider {
+      display: none;
+    }
+
+    /* HERO AREA */
+
+    .hero-area .content-wrapper {
+      margin-top: 75px;
+    }
+
+    .hero-area h1 {
+      font-size: 3em;
+      margin-top: 0;
+    }
+
+
+
+    /*Aside */
+
+    aside .content-wrapper {
+      justify-content: space-between;
+    }
+
+    aside #what-is-1 {
+      flex-basis: 45%;
+    }
+
+    aside #what-is-2 {
+      flex-basis: 55%;
+    }
+
+    aside h2 {
+      line-height: 1.7;
+    }
+
+    aside p {
+      font-size: .92em;
+    }
+
+
+
+    /* Features */
+
+    .features article {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column wrap;
+      flex-basis: 50%;
+    }
+
+    .features .features-item-description {
+      width: 50%;
+    }
+
+    .features h2 {
+      text-align: center;
+    }
+
+    .features i {
+      margin-bottom: 30px;
+    }
+
+    .features br {
+      display: block;
+    }
+
+
+    /* Reviews */
+    
+    
+
+
+
+
+
+
+    
 }
 
 @media print,
